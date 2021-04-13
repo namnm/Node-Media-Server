@@ -4,7 +4,7 @@
   "description": "A Node.js implementation of RTMP Server",
   "main": "node_media_server.js",
   "scripts": {
-    "test": "node app.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,8 @@
     "basic-auth-connect": "^1.0.0",
     "chalk": "^2.4.2",
     "dateformat": "^3.0.3",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
     "express": "^4.16.4",
     "lodash": ">=4.17.13",
     "mkdirp": "1.0.3",

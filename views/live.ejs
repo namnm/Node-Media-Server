@@ -1,0 +1,19 @@
+<script src="https://cdn.bootcss.com/flv.js/1.5.0/flv.min.js"></script>
+<video id="videoElement" width="100%" height="100%" controls></video>
+<input id = "roomId" value="<%= roomId%>"/>
+<input id = "liveHost" value="<%= liveHost%>"/>
+<script>
+    if (flvjs.isSupported()) {
+        var roomId = document.getElementById('roomId').value
+        var liveHost = document.getElementById('liveHost').value
+        console.log('live at', liveHost + roomId)
+        var videoElement = document.getElementById('videoElement');
+        var flvPlayer = flvjs.createPlayer({
+            type: 'flv',
+            url: liveHost + roomId
+        });
+        flvPlayer.attachMediaElement(videoElement);
+        flvPlayer.load();
+        flvPlayer.play();
+    }
+</script>

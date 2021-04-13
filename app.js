@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const NodeMediaServer = require('./');
 
 const config = {
@@ -22,19 +24,11 @@ const config = {
     allow_origin: '*',
     api: true
   },
-  https: {
-    port: 8443,
-    key: './privatekey.pem',
-    cert: './certificate.pem',
-  },
-  auth: {
-    api: true,
-    api_user: 'admin',
-    api_pass: 'admin',
-    play: false,
-    publish: false,
-    secret: 'nodemedia2017privatekey'
-  }
+  // https: {
+  //   port: 8443,
+  //   key: './privatekey.pem',
+  //   cert: './certificate.pem',
+  // },
 };
 
 
